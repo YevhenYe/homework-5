@@ -503,6 +503,11 @@ align-items: baseline;}
         
                 .icon-footer {fill:#f4f4fd};
 
+.container-input{display: flex;
+}
+
+                
+
 
 
 .container {}
@@ -514,8 +519,13 @@ align-items: baseline;}
     width: 100%;
     height: 100%;
     background: rgba(46, 47, 66, 0.4);
-    
-}
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;}
+
+    .is-open {opacity: 1;
+    visibility: visible;
+pointer-events: auto;}
 
 
 .modal {
