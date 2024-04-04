@@ -504,9 +504,11 @@ align-items: baseline;}
 
                 /*-----container-input*/
 
+                .backdrop{}
+
 .footer-input-sub{display: flex;
 gap: 24px;
-flex-direction: row;}
+}
 
 .container-input {width: 454px;
     height: 80px;
@@ -550,7 +552,7 @@ font-family: inherit;
 
 .icon-frame {fill: #fff;
    
-   
+margin-left: 16px;
 }
 
 
