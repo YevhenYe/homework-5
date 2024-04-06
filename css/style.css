@@ -625,7 +625,7 @@ button {
 .modal-btn-x:focus {
   background-color: #404bbf;
   border: none;
-  fill: #ffffff;
+  
 }
 .modal-btn-x:hover {
   background-color: #404bbf;
