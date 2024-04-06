@@ -614,22 +614,20 @@ button {
   height: 24px;
   right: 22px;
   border: none;
-  right: 24px;
-  margin: 0 auto;
-  background: #e7e9fc;
+  border: none;
+  fill: #ffffff;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0;
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    
 }
-
-.modal-btn-x:hover {
+.modal-btn-x:focus {
   background-color: #404bbf;
   border: none;
   fill: #ffffff;
 }
-.modal-btn-x:focus {
+.modal-btn-x:hover {
   background-color: #404bbf;
   border: none;
   fill: #ffffff;
