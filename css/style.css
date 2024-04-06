@@ -565,6 +565,8 @@ button {
   margin-left: 16px;
 }
 
+/*-------------backdrop-------------*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -575,6 +577,8 @@ button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -590,19 +594,21 @@ button {
   transform: translate(-50%, -50%);
   border-radius: 4px;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   padding-left: 24px;
   padding-right: 24px;
-  justify-content: center;
-  align-items: center;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-x {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-
+  top: 24px;
   border-radius: 50%;
   width: 24px;
   height: 24px;
@@ -610,15 +616,19 @@ button {
   top: 15px;
   border: none;
   display: block;
-
+  right: 24px;
   margin: 0 auto;
   background: #e7e9fc;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn-x:hover,
-.modal-btn-x:focus {
+.modal-btn-x:hover {
   background-color: #404bbf;
+  border: none;
 }
 
 .icon-x {
@@ -640,7 +650,7 @@ button {
 }
 
 .modal-field {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .modal-input {
@@ -652,6 +662,8 @@ button {
   background-color: transparent;
   outline: transparent;
   transition: fiil 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -672,6 +684,12 @@ button {
   resize: none;
   margin-bottom: 16px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  padding: 8px 16px;
 }
 
 .input-coment-modal:focus {
@@ -687,8 +705,6 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 8px;
-  padding-left: 16px;
 }
 
 .modal-label {
@@ -706,7 +722,13 @@ button {
   left: 24px;
   top: 50%;
   transform: translateY(-50%);
-  transition: fiil 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  left: 16px;
+}
+
+.modal-icon:hover,
+.modal-icon:focus {
+  fill: #ffffff;
 }
 
 .modal-input-wrapp {
@@ -716,11 +738,11 @@ button {
 .btn-modal-send {
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   flex-direction: row;
@@ -730,6 +752,8 @@ button {
   line-height: 150%;
   letter-spacing: 0.04em;
   margin: 0 auto;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-text {
@@ -756,11 +780,18 @@ button {
   margin-right: 8px;
   display: flex;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-check:checked + .check-text span {
   background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
 }
 
 .modal-check-icon {
