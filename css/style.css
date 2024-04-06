@@ -612,14 +612,13 @@ button {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  right: 22px;
+  right: 24px;
   border: none;
   border: none;
-  fill: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #e7e9fc;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .modal-btn-x:focus {
